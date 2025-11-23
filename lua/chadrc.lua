@@ -17,9 +17,6 @@ M.ui = {
 
 M.mason = {
 	pkgs = {
-		'eslint-lsp',
-		'json-lsp',
-		'prettierd',
 		'typescript-language-server',
 		'tailwindcss-language-server',
 	},
