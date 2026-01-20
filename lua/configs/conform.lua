@@ -7,6 +7,7 @@ local options = {
 		typescript = { 'prettierd' },
 		javascriptreact = { 'prettierd' },
 		typescriptreact = { 'prettierd' },
+		json = { 'prettierd' },
 		python = {
 			-- To run the Ruff formatter.
 			'ruff_format',

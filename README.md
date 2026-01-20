@@ -4,6 +4,22 @@
 - So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
 - So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
 
-# Credits
+# Instalation
 
-1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+```bash
+git clone https://github.com/chertik77/nvchad-config.git ~/.config/nvim
+```
+
+# Language suppports
+
+- HTML
+- CSS
+- Javascript 
+- Typescript
+- React JSX & TSX
+- Tailwind CSS
+- Python
+- JSON
+- Lua
+
+

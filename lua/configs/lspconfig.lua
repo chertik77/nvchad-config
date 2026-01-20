@@ -25,6 +25,7 @@ vim.lsp.config('pyright', {
 		python = {
 			analysis = {
 				typeCheckingMode = 'off', -- Disable type checking diagnostics
+				disableOrganizeImports = true,
 			},
 		},
 	},
