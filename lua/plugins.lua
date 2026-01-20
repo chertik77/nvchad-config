@@ -6,7 +6,9 @@ return {
 	},
 	{
 		'neovim/nvim-lspconfig',
+		event = { 'BufReadPre', 'BufNewFile' },
 		config = function()
+			require('nvchad.configs.lspconfig').defaults()
 			require 'configs.lspconfig'
 		end,
 	},
@@ -17,7 +19,7 @@ return {
 	},
 	{
 		'mfussenegger/nvim-lint',
-		event = 'VeryLazy',
+		event = { 'BufReadPre', 'BufNewFile' },
 		config = function()
 			require 'configs.lint'
 		end,
@@ -30,6 +32,7 @@ return {
 				'css',
 				'javascript',
 				'typescript',
+				'python',
 			},
 		},
 	},

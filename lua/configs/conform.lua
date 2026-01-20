@@ -7,6 +7,12 @@ local options = {
 		typescript = { 'prettierd' },
 		javascriptreact = { 'prettierd' },
 		typescriptreact = { 'prettierd' },
+		python = {
+			-- To run the Ruff formatter.
+			'ruff_format',
+			-- To organize the imports.
+			'ruff_organize_imports',
+		},
 	},
 
 	format_on_save = {
