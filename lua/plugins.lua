@@ -33,7 +33,6 @@ return {
 				'javascript',
 				'typescript',
 				'python',
-				'gitignore',
 				'json',
 				'markdown',
 			},
