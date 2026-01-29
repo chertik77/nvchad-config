@@ -1,34 +1,32 @@
-local on_attach = require('nvchad.configs.lspconfig').on_attach
-local on_init = require('nvchad.configs.lspconfig').on_init
-local capabilities = require('nvchad.configs.lspconfig').capabilities
+local servers = { 'html', 'cssls', 'ts_ls', 'pyright', 'ruff' }
 
-local lspconfig = require 'nvchad.configs.lspconfig'
-
-lspconfig.servers = { 'html', 'cssls', 'ts_ls', 'pyright' }
-
-local default_servers = { 'html', 'cssls', 'ts_ls' }
-
-for _, lsp in ipairs(default_servers) do
-	vim.lsp.config(lsp, {
-		on_attach = on_attach,
-		on_init = on_init,
-		capabilities = capabilities,
-	})
-end
+vim.lsp.enable(servers)
 
 vim.lsp.config('pyright', {
-	on_attach = on_attach,
-	on_init = on_init,
-	capabilities = capabilities,
-
 	settings = {
+		pyright = {
+			disableOrganizeImports = true,
+		},
 		python = {
 			analysis = {
 				typeCheckingMode = 'off', -- Disable type checking diagnostics
-				disableOrganizeImports = true,
+				ignore = { '*' },
 			},
 		},
 	},
 })
 
-vim.lsp.enable 'pyright'
+vim.lsp.config('ruff', {
+	init_options = {
+		settings = {
+			configuration = {
+				['line-length'] = 80,
+				['indent-width'] = 2,
+
+				format = {
+					['quote-style'] = 'single',
+				},
+			},
+		},
+	},
+})
