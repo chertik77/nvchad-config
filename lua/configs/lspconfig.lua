@@ -1,7 +1,5 @@
 local servers = { 'html', 'cssls', 'ts_ls', 'pyright', 'ruff' }
 
-vim.lsp.enable(servers)
-
 vim.lsp.config('pyright', {
 	settings = {
 		pyright = {
@@ -9,8 +7,7 @@ vim.lsp.config('pyright', {
 		},
 		python = {
 			analysis = {
-				typeCheckingMode = 'off', -- Disable type checking diagnostics
-				ignore = { '*' },
+				typeCheckingMode = 'off',
 			},
 		},
 	},
@@ -19,9 +16,10 @@ vim.lsp.config('pyright', {
 vim.lsp.config('ruff', {
 	init_options = {
 		settings = {
+			lint = { enable = false },
 			configuration = {
-				['line-length'] = 80,
 				['indent-width'] = 2,
+				['line-length'] = 80,
 
 				format = {
 					['quote-style'] = 'single',
@@ -30,3 +28,5 @@ vim.lsp.config('ruff', {
 		},
 	},
 })
+
+vim.lsp.enable(servers)
