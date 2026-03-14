@@ -6,7 +6,19 @@ local servers = {
 	'ruff',
 	'tailwindcss',
 	'prismals',
+	'yamlls',
+	'bashls',
 }
+
+vim.lsp.config('cssls', {
+	settings = {
+		css = {
+			lint = {
+				unknownAtRules = 'ignore',
+			},
+		},
+	},
+})
 
 vim.lsp.config('pyright', {
 	settings = {

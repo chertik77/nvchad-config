@@ -1,5 +1,21 @@
 return {
 	{
+		'hrsh7th/nvim-cmp',
+		opts = {
+			completion = {
+				autocomplete = false,
+			},
+		},
+	},
+	{
+		'lewis6991/gitsigns.nvim',
+		enabled = false,
+	},
+	{
+		'lukas-reineke/indent-blankline.nvim',
+		enabled = false,
+	},
+	{
 		'stevearc/conform.nvim',
 		event = 'BufWritePre',
 		opts = require 'configs.conform',
@@ -74,5 +90,12 @@ return {
 			{ '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
 			{ '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
 		},
+	},
+	{
+		'monkoose/neocodeium',
+		event = 'VeryLazy',
+		config = function()
+			require 'configs.neocodeium'
+		end,
 	},
 }

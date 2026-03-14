@@ -9,6 +9,9 @@ local options = {
 		typescriptreact = { 'prettierd' },
 		json = { 'prettierd' },
 		python = { ['lsp_format'] = 'first' },
+		sh = { 'shfmt' },
+		bash = { 'shfmt' },
+		zsh = { 'shfmt' },
 	},
 
 	format_on_save = {
