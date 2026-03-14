@@ -1,4 +1,12 @@
-local servers = { 'html', 'cssls', 'ts_ls', 'pyright', 'ruff' }
+local servers = {
+	'html',
+	'cssls',
+	'ts_ls',
+	'pyright',
+	'ruff',
+	'tailwindcss',
+	'prismals',
+}
 
 vim.lsp.config('pyright', {
 	settings = {

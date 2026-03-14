@@ -1,4 +1,5 @@
 return {
+	change_detection = { notify = false },
 	defaults = { lazy = true },
 	install = { colorscheme = { 'nvchad' } },
 

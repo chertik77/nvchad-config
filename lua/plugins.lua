@@ -34,6 +34,8 @@ return {
 				'python',
 				'typescript',
 				'json',
+				'yaml',
+				'prisma',
 				'markdown',
 				'jsx',
 				'tsx',

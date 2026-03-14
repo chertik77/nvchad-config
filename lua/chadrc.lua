@@ -13,13 +13,8 @@ M.ui = {
 		theme = 'minimal',
 		separator_style = 'round',
 	},
-}
-
-M.mason = {
-	pkgs = {
-		'eslint-lsp',
-		'typescript-language-server',
-		'tailwindcss-language-server',
+	tabufline = {
+		order = { 'treeOffset', 'buffers', 'tabs' },
 	},
 }
 
