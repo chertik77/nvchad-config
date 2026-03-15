@@ -1,10 +1,18 @@
 local servers = {
 	html = {},
 	ts_ls = {},
-	tailwindcss = {},
 	prismals = {},
 	yamlls = {},
 	bashls = {},
+	emmet_ls = {},
+
+	tailwindcss = {
+		settings = {
+			tailwindCSS = {
+				classFunctions = { 'cva', 'cx' },
+			},
+		},
+	},
 
 	cssls = {
 		settings = {

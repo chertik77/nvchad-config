@@ -1,13 +1,5 @@
 return {
 	{
-		'hrsh7th/nvim-cmp',
-		opts = {
-			completion = {
-				autocomplete = false,
-			},
-		},
-	},
-	{
 		'lewis6991/gitsigns.nvim',
 		enabled = false,
 	},
@@ -93,13 +85,6 @@ return {
 		},
 	},
 	{
-		'monkoose/neocodeium',
-		event = 'VeryLazy',
-		config = function()
-			require 'configs.neocodeium'
-		end,
-	},
-	{
 		'kdheepak/lazygit.nvim',
 		lazy = true,
 		cmd = {
@@ -110,8 +95,23 @@ return {
 			'LazyGitFilterCurrentFile',
 		},
 		dependencies = { 'nvim-lua/plenary.nvim' },
-		keys = {
-			{ '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
+		keys = { { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' } },
+	},
+	{
+		'monkoose/neocodeium',
+		event = 'VeryLazy',
+		config = function()
+			local neocodeium = require 'neocodeium'
+			neocodeium.setup { show_label = false, silent = true }
+			vim.keymap.set('i', '<Tab>', neocodeium.accept)
+		end,
+	},
+	{
+		'axelvc/template-string.nvim',
+		event = 'VeryLazy',
+		opts = {
+			remove_template_string = true,
+			restore_quotes = { normal = [[']], jsx = [[']] },
 		},
 	},
 }
