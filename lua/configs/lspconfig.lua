@@ -1,10 +1,24 @@
 local servers = {
 	html = {},
-	ts_ls = {},
 	prismals = {},
 	yamlls = {},
 	bashls = {},
 	emmet_ls = {},
+
+	ts_ls = {
+		settings = {
+			format = { enable = false },
+			diagnostics = { ignoredCodes = { 6133 } },
+		},
+	},
+
+	eslint = {
+		settings = {
+			codeActionOnSave = {
+				enable = true,
+			},
+		},
+	},
 
 	tailwindcss = {
 		settings = {

@@ -9,3 +9,4 @@ map('n', '<leader>+', '<C-a>', { desc = 'Increment number' })
 map('n', '<leader>-', '<C-x>', { desc = 'Decrement number' })
 
 map('n', 'gl', vim.diagnostic.open_float)
+map('n', '<leader>ca', vim.lsp.buf.code_action)
